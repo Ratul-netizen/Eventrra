@@ -282,71 +282,74 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                Obx(() => authController!.isProfileInformationLoading.value
-                    ? const Center(
-                        child: CircularProgressIndicator(),
-                      )
-                    : Container(
-                        height: 50,
-                        margin: EdgeInsets.only(top: Get.height * 0.02),
-                        width: Get.width,
-                        child: elevatedButton(
-                          text: 'Save',
-                          onpress: () async {
-                            if (dob.text.isEmpty) {
-                              Get.snackbar(
-                                  'Warning', "Date of birth is required.",
-                                  colorText: Colors.white,
-                                  backgroundColor: Colors.blue);
-                              return '';
-                            }
+                Obx(
+                  () => authController!.isProfileInformationLoading.value
+                      ? const Center(
+                          child: CircularProgressIndicator(),
+                        )
+                      : Container(
+                          height: 50,
+                          margin: EdgeInsets.only(top: Get.height * 0.02),
+                          width: Get.width,
+                          child: elevatedButton(
+                            text: 'Save',
+                            onpress: () async {
+                              if (dob.text.isEmpty) {
+                                Get.snackbar(
+                                    'Warning', "Date of birth is required.",
+                                    colorText: Colors.white,
+                                    backgroundColor: Colors.blue);
+                                return '';
+                              }
 
-                            if (!formKey.currentState!.validate()) {
-                              return null;
-                            }
+                              if (!formKey.currentState!.validate()) {
+                                return null;
+                              }
 
-                            if (profileImage == null) {
-                              Get.snackbar('Warning', "Image is required.",
-                                  colorText: Colors.white,
-                                  backgroundColor: Colors.blue);
-                              return null;
-                            }
+                              if (profileImage == null) {
+                                Get.snackbar('Warning', "Image is required.",
+                                    colorText: Colors.white,
+                                    backgroundColor: Colors.blue);
+                                return null;
+                              }
 
-                            authController!.isProfileInformationLoading(true);
+                              authController!.isProfileInformationLoading(true);
 
-                            String imageUrl = await authController!
-                                .uploadImageToFirebaseStorage(profileImage!);
+                              String imageUrl = await authController!
+                                  .uploadImageToFirebaseStorage(profileImage!);
 
-                            authController!.uploadProfileData(
-                                imageUrl,
-                                firstNameController.text.trim(),
-                                lastNameController.text.trim(),
-                                mobileNumberController.text.trim(),
-                                dob.text.trim(),
-                                selectedRadio == 0 ? "Male" : "Female");
-                          },
+                              authController!.uploadProfileData(
+                                  imageUrl,
+                                  firstNameController.text.trim(),
+                                  lastNameController.text.trim(),
+                                  mobileNumberController.text.trim(),
+                                  dob.text.trim(),
+                                  selectedRadio == 0 ? "Male" : "Female");
+                            },
+                          ),
                         ),
-                      )),
+                ),
                 SizedBox(
                   height: Get.height * 0.03,
                 ),
                 Container(
-                    width: Get.width * 0.8,
-                    child: RichText(
-                      textAlign: TextAlign.center,
-                      text: const TextSpan(children: [
-                        TextSpan(
-                            text: 'By signing up, you agree our ',
-                            style: TextStyle(
-                                color: Color(0xff262628), fontSize: 12)),
-                        TextSpan(
-                            text: 'terms, Data policy and cookies policy',
-                            style: TextStyle(
-                                color: Color(0xff262628),
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold)),
-                      ]),
-                    ),),
+                  width: Get.width * 0.8,
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(children: [
+                      TextSpan(
+                          text: 'By signing up, you agree our ',
+                          style: TextStyle(
+                              color: Color(0xff262628), fontSize: 12)),
+                      TextSpan(
+                          text: 'terms, Data policy and cookies policy',
+                          style: TextStyle(
+                              color: Color(0xff262628),
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold)),
+                    ]),
+                  ),
+                ),
               ],
             ),
           ),
