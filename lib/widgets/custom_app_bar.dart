@@ -13,7 +13,7 @@ Widget CustomAppBar() {
           width: 116,
           height: 17,
           child: myText(
-              text: 'EMS',
+              text: 'Eventrra',
               style: TextStyle(
                   color: AppColors.blue,
                   fontWeight: FontWeight.bold,

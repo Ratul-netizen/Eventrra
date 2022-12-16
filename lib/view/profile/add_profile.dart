@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:io';
 import 'package:eventrra/controller/auth_controller.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +9,8 @@ import '../../utils/app_color.dart';
 import '../../widgets/my_widgets.dart';
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -218,7 +222,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     controller: dob,
                     // enabled: false,
                     onTap: () {
-                      FocusScope.of(context).requestFocus(new FocusNode());
+                      FocusScope.of(context).requestFocus(FocusNode());
 
                       _selectDate(context);
                     },
