@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:ui';
 import 'package:eventrra/view/profile/add_profile.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +37,7 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     authController = Get.put(AuthController());
@@ -228,8 +231,8 @@ class _LoginViewState extends State<LoginView> {
                                 authController.forgetPassword(
                                     forgetEmailController.text.trim());
                               },
-                              child: const Text("Sent"),
                               minWidth: double.infinity,
+                              child: const Text("Sent"),
                             )
                           ],
                         ),
