@@ -1,15 +1,18 @@
+// ignore_for_file: library_private_types_in_public_api, library_prefixes
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../utils/app_color.dart';
 import '../../widgets/my_widgets.dart';
 import 'package:timeago/timeago.dart' as timeAgo;
 
 class UserNotificationScreen extends StatefulWidget {
+  const UserNotificationScreen({super.key});
+
   @override
   _UserNotificationScreenState createState() => _UserNotificationScreenState();
 }

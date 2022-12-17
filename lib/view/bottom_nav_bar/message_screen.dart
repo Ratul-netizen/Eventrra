@@ -8,6 +8,8 @@ import '../../controller/data_controller.dart';
 import '../../model/message_model.dart';
 
 class MessageScreen extends StatefulWidget {
+  const MessageScreen({super.key});
+
   @override
   _MessageScreenState createState() => _MessageScreenState();
 }

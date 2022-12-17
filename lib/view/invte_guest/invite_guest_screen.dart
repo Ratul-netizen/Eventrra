@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -124,7 +126,7 @@ class _InviteguestState extends State<Inviteguest> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     //alignment: Alignment.center,
 
                     width: 100,
@@ -153,7 +155,7 @@ class _InviteguestState extends State<Inviteguest> {
                   ),
                 ],
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: screenheight * 0.6,
                 child: ListView.builder(
@@ -203,7 +205,7 @@ class _InviteguestState extends State<Inviteguest> {
                   },
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 50,
                 width: double.infinity,
                 child: ElevatedButton(

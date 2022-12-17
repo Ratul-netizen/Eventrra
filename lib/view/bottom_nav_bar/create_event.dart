@@ -1,4 +1,5 @@
-import 'dart:async';
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:dotted_border/dotted_border.dart';
@@ -216,7 +217,7 @@ class _CreateEventViewState extends State<CreateEventView> {
                           SizedBox(
                             height: Get.height * 0.05,
                           ),
-                          Container(
+                          SizedBox(
                             width: 76,
                             height: 59,
                             child: Image.asset('assets/uploadIcon.png'),
@@ -250,7 +251,7 @@ class _CreateEventViewState extends State<CreateEventView> {
 
                 media.length == 0
                     ? Container()
-                    : Container(
+                    : SizedBox(
                         width: Get.width,
                         height: Get.width * 0.3,
                         child: ListView.builder(
@@ -907,7 +908,7 @@ class _CreateEventViewState extends State<CreateEventView> {
                     ? const Center(
                         child: CircularProgressIndicator(),
                       )
-                    : Container(
+                    : SizedBox(
                         height: 42,
                         width: double.infinity,
                         child: elevatedButton(

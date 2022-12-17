@@ -1,6 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'dart:ui';
 import 'package:eventrra/view/profile/add_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -102,7 +101,7 @@ class _LoginViewState extends State<LoginView> {
                 SizedBox(
                   height: Get.height * 0.03,
                 ),
-                Container(
+                SizedBox(
                   width: Get.width * 0.55,
                   child: TabBar(
                     labelPadding: EdgeInsets.all(Get.height * 0.01),
@@ -136,7 +135,7 @@ class _LoginViewState extends State<LoginView> {
                 SizedBox(
                   height: Get.height * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: Get.width,
                   height: Get.height * 0.6,
                   child: Form(
@@ -213,7 +212,7 @@ class _LoginViewState extends State<LoginView> {
                 onTap: () {
                   Get.defaultDialog(
                       title: 'Forget Password?',
-                      content: Container(
+                      content: SizedBox(
                         width: Get.width,
                         child: Column(
                           children: [
@@ -409,7 +408,7 @@ class _LoginViewState extends State<LoginView> {
         SizedBox(
           height: Get.height * 0.02,
         ),
-        Container(
+        SizedBox(
             width: Get.width * 0.8,
             child: RichText(
               textAlign: TextAlign.center,

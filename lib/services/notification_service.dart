@@ -22,7 +22,7 @@ class LocalNotificationService {
   static void display(RemoteMessage message) async {
     try {
       print("In Notification method");
-      Random random = new Random();
+      Random random = Random();
       int id = random.nextInt(1000);
       const NotificationDetails notificationDetails = NotificationDetails(
           android: AndroidNotificationDetails(
