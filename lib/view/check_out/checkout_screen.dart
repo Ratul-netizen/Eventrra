@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,7 +13,7 @@ import '../../widgets/my_widgets.dart';
 class CheckOutView extends StatefulWidget {
   DocumentSnapshot? eventDoc;
 
-  CheckOutView(this.eventDoc);
+  CheckOutView(this.eventDoc, {super.key});
 
   @override
   State<CheckOutView> createState() => _CheckOutViewState();

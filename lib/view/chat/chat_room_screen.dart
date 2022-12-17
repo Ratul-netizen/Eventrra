@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
@@ -288,7 +290,7 @@ class _ChatState extends State<Chat> {
                                 'uid': myUid
                               };
 
-                              if (replyText.length > 0) {
+                              if (replyText.isNotEmpty) {
                                 data['reply'] = replyText;
                                 data['type'] = 'iSentReply';
                                 replyText = '';
@@ -306,7 +308,7 @@ class _ChatState extends State<Chat> {
                                   message: message,
                                   token: widget.fcmToken);
                             },
-                            child: Container(
+                            child: SizedBox(
                               width: 41,
                               height: 41,
                               child: Image.asset(
