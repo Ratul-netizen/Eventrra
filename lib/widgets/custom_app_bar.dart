@@ -9,7 +9,7 @@ Widget CustomAppBar() {
     margin: const EdgeInsets.symmetric(vertical: 15),
     child: Row(
       children: [
-        Container(
+        SizedBox(
           width: 116,
           height: 17,
           child: myText(
@@ -20,12 +20,12 @@ Widget CustomAppBar() {
                   fontSize: 16)),
         ),
         const Spacer(),
-        Container(
+        SizedBox(
           width: 24,
           height: 22,
           child: InkWell(
             onTap: () {
-              Get.to(() => UserNotificationScreen());
+              Get.to(() => const UserNotificationScreen());
             },
             child: Image.asset('assets/Frame.png'),
           ),
@@ -35,7 +35,7 @@ Widget CustomAppBar() {
         ),
         InkWell(
           onTap: () {},
-          child: Container(
+          child: SizedBox(
             width: 22,
             height: 20,
             child: Image.asset(
