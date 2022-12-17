@@ -46,7 +46,7 @@ class AuthController extends GetxController {
       isLoading(false);
 
       /// Navigate user to profile screen
-      Get.to(() => ProfileScreen());
+      Get.to(() => const ProfileScreen());
     }).catchError((e) {
       /// print error information
       print("Error in authentication $e");
