@@ -29,8 +29,8 @@ class _BottomBarViewState extends State<BottomBarView> {
     HomeScreen(),
     CommunityScreen(),
     const CreateEventView(),
-    MessageScreen(),
-    ProfileScreen()
+    const MessageScreen(),
+    const ProfileScreen()
   ];
 
   @override

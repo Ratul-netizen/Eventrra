@@ -293,7 +293,7 @@ class _LoginViewState extends State<LoginView> {
               socialAppsIcons(
                   text: 'assets/fb.png',
                   onPressed: () {
-                    Get.to(() => ProfileScreen());
+                    Get.to(() => const ProfileScreen());
                   }),
               socialAppsIcons(
                   text: 'assets/google.png',

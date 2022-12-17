@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: use_build_context_synchronously, non_constant_identifier_names
 
 import 'dart:io';
 import 'dart:typed_data';
@@ -243,13 +243,13 @@ class _CreateEventViewState extends State<CreateEventView> {
                     ),
                   ),
                 ),
-                media.length == 0
+                media.isEmpty
                     ? Container()
                     : const SizedBox(
                         height: 20,
                       ),
 
-                media.length == 0
+                media.isEmpty
                     ? Container()
                     : SizedBox(
                         width: Get.width,

@@ -5,7 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controller/data_controller.dart';
-import '../../model/message_model.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({super.key});
