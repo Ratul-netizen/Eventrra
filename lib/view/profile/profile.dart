@@ -220,7 +220,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               fontWeight: FontWeight.w700,
                             ),
                           )
-                        : Container(
+                        : SizedBox(
                             width: Get.width * 0.6,
                             child: Row(
                               children: [
@@ -250,14 +250,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                     isNotEditable
                         ? Text(
-                            "${locationController.text}",
+                            locationController.text,
                             style: const TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
                               color: Color(0xff918F8F),
                             ),
                           )
-                        : Container(
+                        : SizedBox(
                             width: Get.width * 0.6,
                             child: TextField(
                               controller: locationController,
@@ -271,10 +271,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 15,
                     ),
                     isNotEditable
-                        ? Container(
+                        ? SizedBox(
                             width: 270,
                             child: Text(
-                              '${descriptionController.text}',
+                              descriptionController.text,
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 letterSpacing: -0.3,
@@ -283,7 +283,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                           )
-                        : Container(
+                        : SizedBox(
                             width: Get.width * 0.6,
                             child: TextField(
                               controller: descriptionController,
@@ -351,7 +351,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ],
                           ),
-                          Container(
+                          SizedBox(
                             height: 40,
                             width: screenwidth * 0.25,
                             child: TextButton(
@@ -574,7 +574,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      '${ticket[index].name}',
+                                                      ticket[index].name,
                                                       style: const TextStyle(
                                                         fontSize: 15,
                                                         fontWeight:
@@ -588,7 +588,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                       children: [
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].img1}'),
+                                                              ticket[index].img1),
                                                           width: 27,
                                                           height: 27,
                                                         ),
@@ -597,7 +597,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         ),
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].img2}'),
+                                                              ticket[index].img2),
                                                           width: 27,
                                                           height: 27,
                                                         ),
@@ -606,7 +606,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         ),
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].img3}'),
+                                                              ticket[index].img3),
                                                           width: 27,
                                                           height: 27,
                                                         ),
@@ -615,7 +615,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         ),
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].img4}'),
+                                                              ticket[index].img4),
                                                           width: 27,
                                                           height: 27,
                                                         ),
@@ -624,7 +624,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         ),
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].img5}'),
+                                                              ticket[index].img5),
                                                           width: 27,
                                                           height: 27,
                                                         ),
@@ -633,7 +633,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         ),
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].img6}'),
+                                                              ticket[index].img6),
                                                           width: 27,
                                                           height: 27,
                                                         ),
@@ -644,7 +644,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                     ),
                                                     Row(
                                                       children: [
-                                                        Container(
+                                                        SizedBox(
                                                           height: 30,
                                                           child: Image.asset(
                                                             ticket[index].heart,
@@ -659,7 +659,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                                       .only(
                                                                   left: 10),
                                                           child: Text(
-                                                            '${ticket[index].count}',
+                                                            ticket[index].count,
                                                             style: const TextStyle(
                                                               fontSize: 13,
                                                               fontWeight:
@@ -673,7 +673,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         ),
                                                         Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].message}'),
+                                                              ticket[index].message),
                                                           width: 16,
                                                           height: 16,
                                                         ),
@@ -683,7 +683,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                                       .only(
                                                                   left: 10),
                                                           child: Text(
-                                                            '${ticket[index].rate}',
+                                                            ticket[index].rate,
                                                             style: const TextStyle(
                                                                 fontSize: 13,
                                                                 fontWeight:
@@ -697,7 +697,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                         Container(
                                                             child: Image(
                                                           image: AssetImage(
-                                                              '${ticket[index].share}'),
+                                                              ticket[index].share),
                                                           width: 15,
                                                           height: 15,
                                                         )),
